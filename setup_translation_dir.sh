@@ -2,6 +2,7 @@
 set -e
 
 echo "=== EdgeTX Build Environment Setup ==="
+echo "make sure to edit to YOUR local DEFAULT_TRANSLATIONS_DIR , only adjust the next command in this script"
 
 # --- Define Default Translations Directory ---
 DEFAULT_TRANSLATIONS_DIR="/home/kingstarking/edgetx/edgetx-2025-10-27-MASTER/edgetx/radio/src/translations/"

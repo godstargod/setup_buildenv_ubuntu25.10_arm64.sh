@@ -18,7 +18,7 @@
   ```
 
 I've always built using the method described [here for Ubuntu 20.04](https://github.com/EdgeTX/edgetx/wiki/Build-Instructions-under-Ubuntu-20.04).
-Adjust accordingly based on your Ubuntu version.
+Adjust accordingly.
 
 ---
 
@@ -75,7 +75,7 @@ These commands are how I successfully built the project.
 
 Since this setup is designed for the **CM511600** hardware, **swap** can help alleviate the bottleneck caused by limited cores and RAM during the build process.
 
-The build, especially with Qt6 dependencies, can push the system to its limits (100% CPU, 100% RAM). Monitoring with `htop` during builds will show the strain, and swap will help prevent freezing.
+The build, especially with Qt6 dependencies, can push the system to its limits (100% CPU, 100% RAM). Monitor ing with `htop` during builds will show the strain, and swap will help prevent freezing.
 For best results, I recommend setting up **16 GB of swap** to handle the heavy workload.
 
 ---

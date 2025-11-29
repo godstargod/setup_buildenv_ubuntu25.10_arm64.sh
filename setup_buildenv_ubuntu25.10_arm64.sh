@@ -165,6 +165,7 @@ echo "CUPS_INCLUDE_DIR and CUPS_LIBRARIES added to .bashrc if not already presen
 
 # --- Return to home directory ---
 cd "$HOME"
+source ~/.bashrc
 
 # --- Done ---
 echo "=== Environment setup complete! ==="

@@ -14,12 +14,20 @@ ive notice my cm5116000 will always crash hung the machine when reaching 100% if
 (if not all 4 core/processor shoots to 100% , memory and swap looks normal tho )
 i also had to systrace and tee while building and showhow that worked but not without , go figure maybe its heavy for the sdcard..
 
-ie for my tx16s that have lsm6ds33 gyro on the external port i would 
-cmake -LAH ../ > ~/edgetx_main-cmake-options.txt && cmake -DPCB=X10 -DPCBREV=TX16S -DDEFAULT_MODE=2 -DGVARS=YES -DIMU_LSM6DS33=YES -DLUA_MIXER=YES -DCMAKE_BUILD_TYPE=Release ../ && cmake -LAH ../ > ~/edgetx_main-cmake-options.txt && make configure
+IE for my tx16s that have lsm6ds33 gyro on the external port i would 
+
+cmake -LAH ../ > ~/edgetx_main-cmake-options.txt && cmake -DPCB=X10 -DPCBREV=TX16S -DDEFAULT_MODE=2 -DGVARS=YES -DIMU_LSM6DS33=YES -DLUA_MIXER=YES -DCMAKE_BUILD_TYPE=Release ../ 
+
+cmake -LAH ../ > ~/edgetx_main-cmake-options.txt && make configure
+
 ulimit -c unlimited
+
 export CORE_PATTERN="/tmp/core.%e.%p"
+
 strace -f -o ~/edgetx/strace-build.log make VERBOSE=1 -j4 firmware 2>&1 | tee ~/edgetx/teebuild.log
+
 strace -f -o ~/edgetx/strace-build.log make VERBOSE=1 -j4 libsimulator 2>&1 | tee ~/edgetx/teebuild.log
+
 ...
 
 thats how i got those to buid

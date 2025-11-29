@@ -42,7 +42,8 @@ sudo apt install -y \
     libgl1-mesa-dev \
     libglu1-mesa-dev \
     libclang-dev \
-    libgtest-dev
+    libgtest-dev \
+    ccache
 
 
 # --- Qt6 Development Packages ---
@@ -55,7 +56,7 @@ sudo apt install -y \
     qt6-svg-dev \
     qt6-serialport-dev \
     qt6-multimedia-dev \
-    qml6-module-qtquick-controls \
+    inqml6-module-qtquick-controls \
     qml6-module-qtquick-layouts
 
 # --- Check and Set QTDIR for Qt6 ---

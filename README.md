@@ -77,6 +77,16 @@ Verify:
 swapon --show
 free -h
 
+Final Steps
 
-Now, your system will have 16 GB of swap. 
+Check current swappiness:
+
+cat /proc/sys/vm/swappiness
+
+
+Set swappiness to 10 (or your preferred value 0-1 being lowest 60 seems to be the default will use it more agressively):
+
+sudo sysctl vm.swappiness=10
+
+Now, your system will have 16 GB of swap. that tirggers at like 90% cpu usage with an sdcard
 Monitor with htop from another shell while building

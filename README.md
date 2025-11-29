@@ -1,4 +1,5 @@
 USAGE
+
 setup_buildenv_ubuntu25.10_arm64.sh
  -setup the build env necessary tools to build edgetx from ubuntu25.10 for an arm64
 
@@ -12,7 +13,7 @@ adjust accordingly
 
 ive notice my cm5116000 will always crash hung the machine when reaching 100% if in x11 , but not in wayland 
 (if not all 4 core/processor shoots to 100% , memory and swap looks normal tho )
-i also had to systrace and tee while building and showhow that worked but not without , go figure maybe its heavy for the sdcard..
+i also had to systrace and tee while building and somehow that worked but not without , go figure maybe its heavy for the sdcard..
 
 IE for my tx16s that have lsm6ds33 gyro on the external port i would 
 

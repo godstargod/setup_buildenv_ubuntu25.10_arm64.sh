@@ -96,6 +96,40 @@ Now, your system will have 16 GB of swap. that tirggers at like 90% cpu usage wi
 
 
 
+And here's how you can set the swappiness permanently:
+
+1. Create a new configuration file for swappiness
+
+You can create a custom .conf file in /etc/sysctl.d/ for your swappiness setting.
+
+Open a new file (e.g., 99-swappiness.conf):
+
+sudo nano /etc/sysctl.d/99-swappiness.conf
+
+2. Add the swappiness setting
+
+In the file, add the following line:
+
+vm.swappiness=10
+
+3. Save and exit
+
+Press CTRL + X, then Y to confirm, and Enter to save.
+
+4. Apply the changes
+
+Apply the settings immediately without needing a reboot:
+
+sudo sysctl --system
+
+5. Verify
+
+Check the current swappiness value:
+
+cat /proc/sys/vm/swappiness
+
+
+
 SUCESSFULLY BUILD ON WAYLAND PLASMA,AND CONFIRM BUILDS WORKED IN X11 PLASMA AND WAYLAND PLASMA.
 
  -firmware

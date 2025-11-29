@@ -55,7 +55,7 @@ all the absurd qt6 linking
 
 here how 
 
-urn off swap (so we can resize it):
+Turn off swap (so we can resize it if theres one already):
 
 sudo swapoff /swapfile
 
@@ -78,4 +78,5 @@ swapon --show
 free -h
 
 
-Now, your system will have 16 GB of swap.
+Now, your system will have 16 GB of swap. 
+Monitor with htop from another shell while building

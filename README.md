@@ -1,3 +1,4 @@
+
 USAGE
 
 setup_buildenv_ubuntu25.10_arm64.sh
@@ -50,8 +51,9 @@ PERSONNALISE THE FILE setup_translation_dir.sh THIS IS NECESSARY IF YOU ARE TO R
 IMPORTANTLY
 
 since this is made for a CM511600 , its a good idea to help the 100% bottle necking cores and ram with a swap the size of the ram in this case a montruous 16gb for
-all the absurd qt6 linking . its the only way i got success as the machine will be pushed to its limit 
-( 4 processors , 16gb ram , expect libsimulator and companion to reach 9-10GB swap saving the whole thing from freezing )
+all the absurd qt6 linking . its the only way i got success as the machine will be pushed to its limit , ive monitor with htop from another shell while building to see all that 
+( the 4 processors will get to 100%, 16gb ram up to 100% too and expect libsimulator and companion to reach 9-10GB swap saving the whole thing from freezing )
+
 
 here how 
 
@@ -90,6 +92,13 @@ Set swappiness to 10 (or your preferred value 0-1 being lowest 60 seems to be th
 
 sudo sysctl vm.swappiness=10
 
-Now, your system will have 16 GB of swap. that tirggers at like 90% cpu usage with an sdcard ready to build the project 
+Now, your system will have 16 GB of swap. that tirggers at like 90% cpu usage with an sdcard ready to build the heavy parts of the project. ..and in retrospect necessary 
 
-Monitor with htop from another shell while building to see all that
+
+
+SUCESSFULLY BUILD ON WAYLAND PLASMA,APPS WORKED IN X11 PLASMA AND WAYLAND PLASMA. 
+ -firmware
+ -libsimulator
+ -simu
+ -companion
+ -simulator

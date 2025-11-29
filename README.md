@@ -96,9 +96,14 @@ Now, your system will have 16 GB of swap. that tirggers at like 90% cpu usage wi
 
 
 
-SUCESSFULLY BUILD ON WAYLAND PLASMA,APPS WORKED IN X11 PLASMA AND WAYLAND PLASMA. 
+SUCESSFULLY BUILD ON WAYLAND PLASMA,APPS WORKED IN X11 PLASMA AND WAYLAND PLASMA.
+
  -firmware
+
  -libsimulator
+ 
  -simu
+ 
  -companion
+ 
  -simulator

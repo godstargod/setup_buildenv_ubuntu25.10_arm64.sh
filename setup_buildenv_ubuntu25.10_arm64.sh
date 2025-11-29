@@ -45,6 +45,15 @@ sudo apt install -y \
     libgtest-dev \
     ccache
 
+# --- Enable ccache for GCC/G++ if not already set ---
+echo "=== Checking and enabling ccache for GCC/G++ ==="
+if ! grep -q 'export CC="ccache gcc"' ~/.bashrc; then
+    echo 'export CC="ccache gcc"' >> ~/.bashrc
+    echo 'export CXX="ccache g++"' >> ~/.bashrc
+    echo "Added CC and CXX ccache wrappers to ~/.bashrc"
+else
+    echo "CC and CXX ccache settings already exist, skipping."
+fi
 
 # --- Qt6 Development Packages ---
 echo "=== Installing Qt6 development packages ==="

@@ -63,7 +63,9 @@ sudo swapoff /swapfile
 Resize the swapfile (to 16 GB):
 
 sudo fallocate -l 16G /swapfile
+
 sudo chmod 600 /swapfile
+
 sudo mkswap /swapfile
 
 

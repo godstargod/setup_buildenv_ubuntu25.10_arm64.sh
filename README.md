@@ -2,7 +2,7 @@ USAGE
 
 setup_buildenv_ubuntu25.10_arm64.sh
 
- -setup the build env necessary tools to build edgetx from a arm64/pi5 running ubuntu25.10 
+ -setup the build env necessary tools to build edgetx from a arm64/pi5 running ubuntu25.10
 
 it will create edgetx-venv , when ready to build project dont forget to 
 
@@ -12,11 +12,10 @@ ive always build using the method described here for linux on 20.04
 https://github.com/EdgeTX/edgetx/wiki/Build-Instructions-under-Ubuntu-20.04 
 adjust accordingly
 
-ive notice my cm5116000 will always crash hung the machine when reaching 100% if in x11 , but not in wayland 
-(if not all 4 core/processor shoots to 100% , memory and swap looks normal tho )
-i also had to systrace and tee while building and somehow that worked but not without , go figure maybe its heavy for the sdcard..
 
-IE for my tx16s that have lsm6ds33 gyro on the external port i would 
+EXAMPLE
+
+for my tx16s that have lsm6ds33 gyro on the external port i would 
 
 cmake -LAH ../ > ~/edgetx_main-cmake-options.txt && cmake -DPCB=X10 -DPCBREV=TX16S -DDEFAULT_MODE=2 -DGVARS=YES -DIMU_LSM6DS33=YES -DLUA_MIXER=YES -DCMAKE_BUILD_TYPE=Release ../ 
 
@@ -48,10 +47,11 @@ setup_translation_dir.sh
 PERSONNALISE THE FILE setup_translation_dir.sh THIS IS NECESSARY IF YOU ARE TO RUN IT MY INFO IS THERE AS AN EXAMPLE
 
 
-NOTE 
+IMPORTANTLY
 
 since this is made for a CM511600 , its a good idea to help the 100% bottle necking cores and ram with a swap the size of the ram in this case a montruous 16gb for
-all the absurd qt6 linking
+all the absurd qt6 linking . its the only way i got success as the machine will be pushed to its limit 
+( 4 processors , 16gb ram , expect libsimulator and companion to reach 9-10GB swap saving the whole thing from freezing )
 
 here how 
 
@@ -90,6 +90,6 @@ Set swappiness to 10 (or your preferred value 0-1 being lowest 60 seems to be th
 
 sudo sysctl vm.swappiness=10
 
-Now, your system will have 16 GB of swap. that tirggers at like 90% cpu usage with an sdcard
+Now, your system will have 16 GB of swap. that tirggers at like 90% cpu usage with an sdcard ready to build the project 
 
 Monitor with htop from another shell while building to see all that

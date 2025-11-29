@@ -32,7 +32,7 @@ strace -f -o ~/edgetx/strace-build.log make VERBOSE=1 -j4 libsimulator 2>&1 | te
 
 ...
 
-thats how i got those to buid
+thats how i got those to build
 
 
 OPTIONNALY

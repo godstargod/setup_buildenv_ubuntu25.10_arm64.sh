@@ -89,4 +89,5 @@ Set swappiness to 10 (or your preferred value 0-1 being lowest 60 seems to be th
 sudo sysctl vm.swappiness=10
 
 Now, your system will have 16 GB of swap. that tirggers at like 90% cpu usage with an sdcard
-Monitor with htop from another shell while building
+
+Monitor with htop from another shell while building to see all that

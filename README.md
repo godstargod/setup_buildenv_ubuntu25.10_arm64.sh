@@ -37,9 +37,45 @@ thats how i got those to build
 
 OPTIONNALY
 
+git-all-edgetx.sh
+
+ - will git all the edge tx repo including the useless ones in the current dir . its pretty well commented edit it yourself if required its usefull
+
+
 setup_translation_dir.sh
 
  - setup the translation file location to help find them while compiling the project
 PERSONNALISE THE FILE setup_translation_dir.sh THIS IS NECESSARY IF YOU ARE TO RUN IT MY INFO IS THERE AS AN EXAMPLE
 
 
+NOTE 
+
+since this is made for a CM511600 , its a good idea to help the 100% bottle necking cores and ram with a swap the size of the ram in this case a montruous 16gb for
+all the absurd qt6 linking
+
+here how 
+
+urn off swap (so we can resize it):
+
+sudo swapoff /swapfile
+
+
+Resize the swapfile (to 16 GB):
+
+sudo fallocate -l 16G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+
+
+Turn swap back on:
+
+sudo swapon /swapfile
+
+
+Verify:
+
+swapon --show
+free -h
+
+
+Now, your system will have 16 GB of swap.

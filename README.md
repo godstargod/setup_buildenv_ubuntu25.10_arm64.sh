@@ -1,7 +1,8 @@
 USAGE
 
 setup_buildenv_ubuntu25.10_arm64.sh
- -setup the build env necessary tools to build edgetx from ubuntu25.10 for an arm64
+
+ -setup the build env necessary tools to build edgetx from a arm64/pi5 running ubuntu25.10 
 
 it will create edgetx-venv , when ready to build project dont forget to 
 
@@ -35,7 +36,9 @@ thats how i got those to buid
 
 
 OPTIONNALY
+
 setup_translation_dir.sh
+
  - setup the translation file location to help find them while compiling the project
 PERSONNALISE THE FILE setup_translation_dir.sh THIS IS NECESSARY IF YOU ARE TO RUN IT MY INFO IS THERE AS AN EXAMPLE
 
